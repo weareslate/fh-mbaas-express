@@ -5,15 +5,15 @@
   "main": "lib/webapp.js",
   "dependencies": {
     "async": "0.2.9",
-    "body-parser": "1.17.1",
+    "body-parser": "1.18.2",
     "cors": "2.1.0",
-    "express": "4.15.2",
+    "express": "4.16.0",
     "fh-amqp-js": "0.7.1",
     "fh-mbaas-client": "0.16.5",
     "fh-reportingclient": "0.5.7",
     "multer": "0.1.8",
     "request": "2.81.0",
-    "type-is": "~1.1.0",
+    "type-is": "~1.2.1",
     "underscore": "1.5.1"
   },
   "directories": {
