@@ -108,7 +108,7 @@ module.exports = {
       "files": [
         {
           "path": "/some/file/path",
-          "name": "somefileName"
+          "filename": "somefileName"
         }
       ]
     };
