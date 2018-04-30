@@ -1,6 +1,6 @@
 {
   "name": "fh-mbaas-express",
-  "version": "5.10.0",
+  "version": "5.10.2",
   "dependencies": {
     "async": {
       "version": "0.2.9",
