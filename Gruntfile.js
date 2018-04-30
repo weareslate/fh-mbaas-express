@@ -13,7 +13,8 @@ module.exports = function(grunt) {
     unit_cover: 'NO_FLUSH_TIMER=true istanbul cover --dir cov-unit <%= _test_runner %> -- <%= _unit_args %>',
 
     accept: 'NO_FLUSH_TIMER=true <%= _test_runner %> <%= _accept_args %>',
-    accept_cover: 'NO_FLUSH_TIMER=true istanbul cover --dir cov-accept <%= _test_runner %> -- <%= _accept_args %>'
+    accept_cover: 'NO_FLUSH_TIMER=true istanbul cover --dir cov-accept <%= _test_runner %> -- <%= _accept_args %>',
+    integrate:['NO_FLUSH_TIMER=true <%= _test_runner %> ./test/integrate']
   });
 
   grunt.loadNpmTasks('grunt-fh-build');
