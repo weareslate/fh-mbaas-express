@@ -6,10 +6,10 @@ var util = require('util');
 var FormData = require('form-data');
 
 module.exports = {
-  "setUp" : function(finish){
+  "beforeEach" : function(finish){
     finish();
   },
-  "tearDown" : function(finish){
+  "afterEach" : function(finish){
     finish();
   },
   "test_form_call_to_getconfig_with_no_deviceID" : function(finish){
