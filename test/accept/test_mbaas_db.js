@@ -26,7 +26,7 @@ function doDbList(cb) {
 }
 
 module.exports = {
-  "setUp" : function(finish){
+  "beforeEach" : function(finish){
 
     finish();
   },
@@ -86,7 +86,7 @@ module.exports = {
       })
     });
   },
-  tearDown : function(finish){
+  "afterEach" : function(finish){
     finish();
   }
 };

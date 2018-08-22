@@ -2,16 +2,17 @@ var util = require('util');
 var assert = require('assert');
 var proxyquire = require('proxyquire');
 
-var eh = proxyquire('errorHandler.js', { 'fh-mbaas-client': {
-  'initEnvironment': function(env, obj){},
-  'app':{
-    'events':{
-      'create': function (obj, cb){
+function MockMbaasClient(env, obj) {
+  this.app = {
+    events: {
+      create: function(obj, cb) {
         return cb();
       }
     }
   }
-}});
+}
+
+var eh = proxyquire('errorHandler.js', { 'fh-mbaas-client': MockMbaasClient});
 
 exports.it_should_not_attempt_process_exit = function(finish) {
   var originalExit = process.exit;

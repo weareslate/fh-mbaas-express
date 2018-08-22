@@ -4,9 +4,9 @@ module.exports = function(grunt) {
   // Just set shell commands for running different types of tests
   // the NO_FLUSH_TIMER env var stops the reporting flush interval function from being set up and
   grunt.initConfig({
-    _test_runner: 'turbo',
-    _unit_args: './test/unit',
-    _accept_args: '--setUp ./test/setup.js --tearDown ./test/setup.js ./test/accept',
+    _test_runner: 'mocha',
+    _unit_args: '-A -u exports --recursive -t 10000 ./test/unit',
+    _accept_args: '-A -u exports --recursive -t 10000 ./test/setup.js ./test/accept',
 
     // These are the properties that grunt-fh-build will use
     unit: 'NO_FLUSH_TIMER=true <%= _test_runner %> <%= _unit_args %>',

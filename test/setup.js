@@ -2,7 +2,8 @@ var proxyquire = require('proxyquire').noCallThru(),
   application, ditchMock, authMock, validateApiMock;
 var assert = require('assert');
 
-exports.setUp = function(finish) {
+exports.before = function(finish) {
+  console.log("setup application");
   require('./fixtures/env.js');
   ditchMock = require('./fixtures/db');
   authMock = require('./fixtures/authcall.js');
@@ -14,7 +15,8 @@ exports.setUp = function(finish) {
   finish();
 };
 
-exports.tearDown = function(finish) {
+exports.after = function(finish) {
+  console.log("shutdown application");
   application.close();
   // Note: can't run the accept tests individually if these checks are enabled (as they nock endpoints are not hit in every test)
   //ditchMock.done();

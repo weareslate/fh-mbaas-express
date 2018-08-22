@@ -1,6 +1,6 @@
 {
   "name": "fh-mbaas-express",
-  "version": "5.10.1",
+  "version": "6.0.0",
   "description": "FeedHenry MBAAS Express",
   "main": "lib/webapp.js",
   "dependencies": {
@@ -9,8 +9,8 @@
     "cors": "2.1.0",
     "express": "4.16.0",
     "fh-amqp-js": "0.7.1",
-    "fh-mbaas-client": "0.16.5",
-    "fh-reportingclient": "0.5.7",
+    "fh-mbaas-client": "1.1.4",
+    "fh-reportingclient": "1.0.0",
     "multer": "1.3.0",
     "request": "2.81.0",
     "type-is": "~1.2.1",
@@ -20,13 +20,13 @@
     "lib": "lib"
   },
   "engines": {
-    "node": ">=4.4"
+    "node": ">=6"
   },
   "devDependencies": {
     "cli-color": "0.2.2",
-    "form-data": "0.1.2",
+    "form-data": "~2.1.1",
     "grunt": "^0.4.5",
-    "grunt-fh-build": "^2.0.0",
+    "grunt-fh-build": "^2.0.1",
     "istanbul": "^0.3.16",
     "jshint": "^2.5.2",
     "mock-env": "^0.1.3",
@@ -35,7 +35,7 @@
     "proxyquire": "0.4.1",
     "rewire": "^2.5.2",
     "sinon": "^1.17.7",
-    "turbo-test-runner": "~0.3"
+    "mocha": "^5.2.0"
   },
   "scripts": {
     "test": "grunt fh:coverage fh:dist"
