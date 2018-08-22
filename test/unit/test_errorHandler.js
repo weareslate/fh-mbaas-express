@@ -12,7 +12,7 @@ function MockMbaasClient(env, obj) {
   }
 }
 
-var eh = proxyquire('errorHandler.js', { 'fh-mbaas-client': MockMbaasClient});
+var eh = proxyquire('errorHandler.js', { 'fh-mbaas-client': {'MbaasClient': MockMbaasClient}});
 
 exports.it_should_not_attempt_process_exit = function(finish) {
   var originalExit = process.exit;
