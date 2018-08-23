@@ -10,7 +10,7 @@
     "express": "4.16.0",
     "fh-amqp-js": "0.7.1",
     "fh-mbaas-client": "1.1.4",
-    "fh-reportingclient": "1.0.0",
+    "fh-reportingclient": "1.0.1",
     "multer": "1.3.0",
     "request": "2.81.0",
     "type-is": "~1.2.1",
