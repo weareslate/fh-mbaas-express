@@ -1,6 +1,7 @@
 lib-cov/
 .project
 .settings/
+.vscode/
 dist/
 output/
 man/
